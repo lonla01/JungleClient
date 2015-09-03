@@ -1,0 +1,119 @@
+<!-- it works the same with all jquery version from 1.x to 2.x -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jssor.slider.mini.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        var options = { $AutoPlay: true,
+                        var options = {
+                            $BulletNavigatorOptions: {
+                                $Class: $JssorBulletNavigator$,
+                                $ChanceToShow: 2
+                            }
+                        };
+                      };
+        var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+    });
+</script>
+
+
+<div class="row">
+    <div class="col-md-9 col-md-offset-1">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>{{listing.title}}</h3>
+            </div>
+            <div class="panel-body">
+                
+                <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px;">
+    <!-- Slides Container -->
+                    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 600px; height: 300px;">
+
+                        <div u="thumbnavigator" class="jsort07">
+
+                            <strong>Car with {{listing.imageNames.length}} images.</strong>
+                            <div ng-repeat="image in listing.imageNames">
+                                <div><img u="image" src="http://localhost:8080/{{ image }}" /></div>
+                            </div>
+
+                            <span u="arrowleft" class="jssora11l"> </span>
+                            <span u="arrowright" class="jssora11r jssora11rdn"> </span>
+
+                        </div>
+                    </div>               
+                </div>
+
+                <table class="table table-striped">
+                    <tr>
+                        <td>Listing:</td>
+                        <td>{{listing.listing}}</td>
+                    </tr>
+                    <tr>
+                        <td>Cubic Capacity:</td>
+                        <td>{{listing.capacity}}</td>
+                    </tr>
+                    <tr>
+                        <td>Display Name:</td>
+                        <td>{{listing.displayName}}</td>
+                    </tr>
+                    <tr>
+                        <td>Door Count:</td>
+                        <td>{{listing.doorCount}}</td>
+                    </tr>
+                    <tr>
+                        <td>Registration Date:</td>
+                        <td>{{listing.registration}}</td>
+                    </tr>
+                    <tr>
+                        <td>Power:</td>
+                        <td>{{listing.power}}</td>
+                    </tr>
+                    <tr>
+                        <td>Price:</td>
+                        <td>{{listing.price}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>Contact Vendor:</h3>
+                </div>
+                <div class="panel-body">
+
+                    <form ng-submit="sendMessage()">
+                      <fieldset>
+                        <label>Your Name:</label>
+                        <input type="text" placeholder="First Name, Last Name" class="form-control" ng-model="theMsg.name">
+                          <br><label>Your Phone:</label>
+                        <input type="text" placeholder="+352 691 77 66 55" class="form-control"  ng-model="theMsg.phone">
+                        <br><label>Your Email:</label>
+                        <input type="text" placeholder="mail@adress.com" class="form-control"  ng-model="theMsg.email">
+                        <br><label>Type a message:</label>
+                          <textarea name="message" rows="8" cols="47" maxlength="1000" class="form-control"  ng-model="theMsg.message">Dear Sir/Madam,
+
+I am interested in your offer.
+Please contact me.
+
+Kind regards
+                            </textarea>
+                                <div style="text-align:center">
+                                    <button type="submit" class="btn btn-primary">Send Message</button>
+                                </div>
+                      </fieldset>
+                    </form>
+                    
+                 </div>
+            </div>
+        </div>
+</div>
+    
+</div>
+
+
+

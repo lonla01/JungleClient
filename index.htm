@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="jungleApp">
+    <head>
+        <title>Introduction to AngularJS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="UTF-8">
+
+        <!-- load bootstrap and fontawesome via CDN -->
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="http://static.classistatic.de/pubse/static/css/2036961905page-setup.css" />
+
+        <!-- load angular via CDN -->
+        <script src="https://code.angularjs.org/1.4.4/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.4.4/angular-resource.min.js"></script>
+        <script src="https://code.angularjs.org/1.4.4/angular-route.min.js"></script>
+        <script src="js/app.js"></script>
+        
+        <!-- Increase a litle bit the font size -->
+        <style>
+            html, body, input, select, textarea
+            {
+                font-size: 1.05em !important;
+            }
+        </style>
+        
+    </head>
+    <body>
+
+        <header>
+			<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">AngularJS</a>
+				</div>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#/second/suvs"><i class="fa fa-home"></i> SUVs</a></li>
+                    <li><a href="#/second/estates"><i class="fa fa-home"></i> Estates</a></li>
+                    <li><a href="#/second/saloons"><i class="fa fa-home"></i> Saloons</a></li>
+                    <li><a href="#/second/smallCars"><i class="fa fa-home"></i> SmallCars</a></li>
+                    <li><a href="#/second/coupes"><i class="fa fa-home"></i> Coupes</a></li>
+				</ul>
+			</div>
+			</nav>
+		</header>
+        
+        <div ng-view></div>
+        
+        
+
+    </body>
+</html>

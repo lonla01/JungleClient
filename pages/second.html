@@ -1,0 +1,39 @@
+<h1>This is Second</h1>
+<h3>Scope name is {{ pageName }}</h3>
+
+
+
+<div class="container">
+
+            <div class="container" ng-controller="ListingCtrl">
+                
+                
+                
+                <div class="list-group" ng-repeat="listing in listings">
+                    <a href="#/details/{{listing.stringGID}}" class="list-group-item">
+                    <table style="width:100%" cellspacing="20" cellpadding="20">
+                    <tr>
+                        <td>
+                            <div class="cell align-v-top image moreImages">
+                                <img src="http://localhost:8080/{{ listing.thumbnail }}" height="80" width="100">
+                            </div></td>
+                        <td>
+                            <table style="width:90%"  >
+                                <tr><h4 list-group-item-heading>{{ listing.title }}</h4></tr>
+                                <tr>
+                                    <td><p class="lead">{{ listing.registration }}</p></td>
+                                    <td><p class="lead">{{ listing.mileage }}</p></td>
+                                    <td><p class="lead">{{ listing.power }}</p></td>
+                                    <td><p class="lead">{{ listing.stringGID }}</p></td>
+                                    <td><p class="lead"><b>{{ listing.price }}</b></p></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr></table>
+                    </a>
+                    <hr/>
+                </div>
+                
+            </div>
+
+		</div>
